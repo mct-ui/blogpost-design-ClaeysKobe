@@ -29,6 +29,7 @@ html {
   color: #111;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  box-sizing: border-box;
   /* padding: 48px 24px 24px; */
 }
 
@@ -212,6 +213,15 @@ a:focus {
   max-width: 36em;
 }
 
+.c-blockquote {
+  font-family: 'droid serif', sans-serif;
+  color: #00b37d;
+  background-color: #f2faf8;
+  font-size: 23px;
+  line-height: 32px;
+  padding: 24px 22px;
+}
+
 /* Component: Article */
 .c-article__header,
 .c-article__body {
@@ -231,9 +241,24 @@ a:focus {
   padding: 0 24px;
 }
 
+.c-article__date {
+  font-size: 14px;
+  margin: 0;
+}
+
+.c-article__title {
+  font-size: 36px;
+  font-family: 'Inter-Bold', sans-serif;
+  line-height: 40px;
+}
+
 /* Small devices (landscape phones, 576px and up) */
 
 @media (min-width: 576px) {
+  .c-article__title {
+    font-size: 36px;
+    line-height: 40px;
+  }
 }
 
 /* Medium devices (tablets, 768px and up) */
@@ -247,6 +272,10 @@ a:focus {
   }
   .c-article__aside {
     padding-bottom: 24px;
+  }
+  .c-article__title {
+    font-size: 46px;
+    line-height: 56px;
   }
 }
 
@@ -263,11 +292,19 @@ a:focus {
   .c-article__content {
     width: 75%;
   }
+  .c-article__title {
+    font-size: 52px;
+    line-height: 64px;
+  }
 }
 
 /* Extra large devices (large desktops, 1200px and up) */
 
 @media (min-width: 1200px) {
+  .c-article__title {
+    font-size: 58px;
+    line-height: 72px;
+  }
 }
 
 /*
@@ -287,6 +324,7 @@ a:focus {
                                    http://www.sanbeiji.com/archives/953 */
     box-shadow: none !important;
     text-shadow: none !important;
+    box-sizing: inherit;
   }
   a,
   a:visited {
